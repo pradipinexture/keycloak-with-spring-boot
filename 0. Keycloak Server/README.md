@@ -4,6 +4,7 @@ Keyclaok Server
 Keyclaok have two mode 
 
 1. Developer Mode 
+-----------------
 
 The development mode is targeted for people trying out Keycloak the first time and get it up and running quickly. It also offers convenient defaults for developers.
 
