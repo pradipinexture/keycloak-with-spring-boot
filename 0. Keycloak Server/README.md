@@ -17,9 +17,9 @@ The development mode is started by invoking the following command from keyclaok 
 	bin/kc.sh start-dev
 
 To get started, check out the (https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/0.%20Keycloak%20Server/keycloak-19.0.3-dev). 
-
-
-
+-
+-
+-
 
 2. Production Mode 
 ------------------
