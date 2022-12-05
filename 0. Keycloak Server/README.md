@@ -3,6 +3,8 @@ Keyclaok Server
 
 Keyclaok have two mode 
 
+
+
 1. Developer Mode 
 -----------------
 
@@ -17,7 +19,10 @@ The development mode is started by invoking the following command from keyclaok 
 To get started, check out the (https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/0.%20Keycloak%20Server/keycloak-19.0.3-dev). 
 
 
+
+
 2. Production Mode 
+------------------
 
 The production mode is for going live.
 
