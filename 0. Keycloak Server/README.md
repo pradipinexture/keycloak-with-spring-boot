@@ -3,30 +3,43 @@ Keyclaok Server
 
 Keyclaok have two mode 
 
+
+
 1. Developer Mode 
+-----------------
 
-The development mode is targeted for people trying out Keycloak the first time and get it up and running quickly. It also offers convenient defaults for developers.
+- The development mode is targeted for people trying out Keycloak the first time and get it up and running quickly. It also offers convenient defaults for developers.
 
-The development mode is started by invoking the following command from keyclaok root direcotry:
+- In developer mode no need to configure any properties.
+
+- The development mode is started by invoking the following command from keyclaok root direcotry
+
 	bin/kc.sh start-dev
 
-keyclaok Developer mode on link 
+- To get started, check out the (https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/0.%20Keycloak%20Server/keycloak-19.0.3-dev). 
 
 
 2. Production Mode 
+------------------
 
-The production mode is for going live.
+- The production mode is for going live.
 
-The production mode sets the following defaults:
+- The production mode sets the following defaults:
+
 	1. HTTP is disabled as transport layer security (HTTPS) is essential
 	2. HTTPS/TLS configuration is expected
 	3. Hostname configuration is expected
 
-Make sure below configuration must be configured to keyclaok
+- Make sure below configuration must be configured to keyclaok
 
 	https-key-store-file=${kc.home.dir}conf/localhost.p12
 	https-key-store-password=changeit
 
 	hostname=localhost
 
+- The production mode is started by invoking the following command from keyclaok root direcotry
+
+	bin/kc.sh start
+	
+- To get started, check out the (https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/0.%20Keycloak%20Server/keycloak-19.0.3-prod).
 
