@@ -7,7 +7,9 @@ Keyclaok have two mode
 
 The development mode is targeted for people trying out Keycloak the first time and get it up and running quickly. It also offers convenient defaults for developers.
 
-The development mode is started by invoking the following command from keyclaok root direcotry:
+In developer mode no need to configure any properties.
+
+The development mode is started by invoking the following command from keyclaok root direcotry
 	bin/kc.sh start-dev
 
 keyclaok Developer mode on link 
