@@ -1,0 +1,53 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head"/>
+<body>
+<section th:replace="fragments :: html_header"/>
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-12 col-lg-12 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-6 p-sm-6">
+            <br><h3 class="card-title text-center mb-5 fw-light fs-5">All Realms</h3>
+            <div th:if="${realms.isEmpty()}" class="alert alert-danger"><strong>Danger! </strong>Realms are not available in keycloak</div>
+            <table th:if="${!realms.isEmpty()}" class="table table-bordered table-striped table-hover">
+              <thead class="bg-primary">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Realm ID</th>
+                <th scope="col">Realm Name</th>
+                <th scope="col">Realm Status</th>
+                <th scope="col">Admin Site</th>
+                <th scope="col">User Site</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr  th:each="realm , iter: ${realms}">
+                <th scope="row" th:text="${iter.index+1}"></th>
+                <td>
+                  <a th:text="${realm.getId()}"></a>
+                </td>
+                <td>
+                  <a th:text="${realm.getRealm()}"></a>
+                </td>
+
+                <td>
+                  <a th:text="${realm.isEnabled()}"></a>
+                </td>
+                <td>
+                  <a th:href="'http://localhost:2222/tenant/' + ${realm.getRealm()} + '/users'" target="_blank">Go</a>
+                </td>
+                <td>
+                  <a th:href="'http://localhost:3333/tenant/' + ${realm.getRealm()} + '/home'" target="_blank">Go</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

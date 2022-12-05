@@ -1,0 +1,45 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head"/>
+<body>
+    <section th:replace="fragments :: html_header"/>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card border-0 shadow rounded-3 my-5">
+                        <div class="card-body p-4 p-sm-5">
+                            <h5 class="card-title text-center mb-5 fw-light fs-5">Create Realm In Keycloak</h5>
+                            <form method="post" action="/addRealm">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="realm"  id="floatingInput" placeholder="Realm Name" required="required" />
+                                    <label for="floatingInput">Realm Name</label>
+                                </div>
+                                <br><br>
+                                <div class="d-grid">
+                                    <input class="btn btn-primary text-uppercase fw-bold" type="submit" value="Create" />
+                                </div>
+                                <br>
+                                <section th:if="${createMessage != null}">
+                                    <div th:if="${createMessage == 'Realm Created'}">
+                                        <div class="alert alert-success" >
+                                            <strong>Success!</strong>Virtual Software Created with <span th:text="'www.'+${addedRealm}+'.com'"></span>
+                                        </div>
+                                        <div class="text-center">
+                                            <a th:href="'http://localhost:2222/tenant/' + ${addedRealm} + '/users'" target="_blank" class="btn btn-success">Go to Admin Site</a>
+                                            <br><br><br>
+                                            <a th:href="'http://localhost:3333/tenant/' + ${addedRealm} + '/home'" target="_blank" class="btn btn-success">Go to User Site</a>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-danger" th:if="${createMessage != 'Realm Created'}">
+                                        <strong>Error!</strong> <span th:text="${createMessage}"></span>
+                                    </div>
+                                </section>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
