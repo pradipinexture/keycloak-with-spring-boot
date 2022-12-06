@@ -15,11 +15,11 @@ Task for multi-tenant
 Solution
 --------
 
-- Created below microservices
+- We have created below microservices for multi-tenant task
 
-	1. realm-management-system
-	2. user-site
-	3. admin-site
+	- realm-management-system
+	- user-site
+	- admin-site
 
 <br><h3>1. realm-management-system</h3>
 - This site accessible by only mater realm's user.
@@ -27,20 +27,20 @@ Solution
 
 - When master admin create any realm then few functionally triggered
 
-	1. create realm in keycloak using admin-client
-	2. add common client in new realm
-	3. create two roles in new realm(user and admin)
-	4. create default admin in newly created realm  (id=master and pass=123)
-	5. assign admin role to default user
-	6. Add keyclaokDeployment entry in DB for multi-tenant feature.
-	7. Give two option 
-		a. Go to User site
-		b. Go to admin site
+	- create realm in keycloak using admin-client
+	- add common client in new realm
+	- create two roles in new realm(user and admin)
+	- create default admin in newly created realm  (id=master and pass=123)
+	- assign admin role to default user
+	- Add keyclaokDeployment entry in DB for multi-tenant feature.
+	- If above all operations are done then give two option 
+		- Go to User site
+		- Go to admin site
 
 - When master admin delete any realm then few functionally triggered
 
-	1. Delete realm from keycloak using admin-client
-	2. Delete KeycloakDeployment entry from DB
+	- Delete realm from keycloak using admin-client
+	- Delete KeycloakDeployment entry from DB
 
 - Note : User can not perfrom any operation in master realm.
 
