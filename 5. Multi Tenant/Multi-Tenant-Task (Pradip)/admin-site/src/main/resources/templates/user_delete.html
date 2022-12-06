@@ -1,0 +1,37 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head"/>
+<body>
+  <section th:replace="fragments :: html_header"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Delete Realm</h5>
+              <form method="get" action="deleteuser">
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="userId"  id="floatingInput" placeholder="User ID" required="required" />
+                  <label for="floatingInput">User ID</label>
+                </div>
+                <br><br>
+                <div class="d-grid">
+                  <input class="btn btn-primary text-uppercase fw-bold" type="submit" value="Delete" />
+                </div>
+                <br>
+                <section th:if="${deleteMessage != null}">
+                  <div class="alert alert-success" th:if="${deleteMessage == 'User Deleted'}">
+                    <strong>Success!</strong> <span th:text="${deleteMessage}"></span>
+                  </div>
+                  <div class="alert alert-danger" th:if="${deleteMessage != 'User Deleted'}">
+                    <strong>Error!</strong> <span th:text="${deleteMessage}"></span>
+                  </div>
+                </section>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
