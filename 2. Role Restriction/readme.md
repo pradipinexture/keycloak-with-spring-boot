@@ -1,7 +1,7 @@
 Role-Based-Application
 ======================
 
-In this project we are implemented user roles for authorization like user wants to use any resource of this application then user must have a specified role.
+In this project we have implemented user roles for authorization like user wants to use any resource of this application then user must have a specified role.
 
 Realm role Implementation
 
