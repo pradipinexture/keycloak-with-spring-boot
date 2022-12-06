@@ -20,8 +20,8 @@ Solution
 	1. realm-management-system
 	2. user-site
 	3. admin-site
-	
-1. realm-management-system
+
+<br><h3>1. realm-management-system</h3>
 - This site accessible by only mater realm's user.
 - It has get, create and delete realm functionally.
 
@@ -44,11 +44,10 @@ Solution
 
 - Note : User can not perfrom any operation in master realm.
 
-
-2. user-site
+<br><h3>2. user-site</h3>
 - In usersite user can register himself and able to see him/her profile.
 
-3. admin-site
+<br><h3>3. admin-site</h3>
 - admin-site has a functionality like get,create and delete user.
 - Note : only admin user can able to login in admin site and user is not admin then redirect to eror page and give two option logout and Go to user site.
 
