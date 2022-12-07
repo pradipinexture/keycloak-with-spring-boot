@@ -9,7 +9,8 @@
         <div class="card border-0 shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Delete Realm</h5>
-              <form method="get" action="deleteuser"  onsubmit="takeConformation()">
+              <div th:if="${users.isEmpty()}" class="alert alert-danger"><strong>Danger! </strong>Users are not available in this realm</div>
+              <form th:if="${!users.isEmpty()}"  method="get" action="deleteuser"  onsubmit="takeConformation()">
 <!--                <div class="form-floating">-->
 <!--                  <input type="text" class="form-control" name="userId"  id="floatingInput" placeholder="User ID" required="required" />-->
 <!--                  <label for="floatingInput">User ID</label>-->

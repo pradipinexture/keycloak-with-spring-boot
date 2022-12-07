@@ -46,7 +46,6 @@ public class KeycloakController {
         String createMessage = keycloakService.addUser(user);
         model.addAttribute("createMessage",createMessage);
         System.out.println(createMessage);
-
         return "user_create";
     }
 

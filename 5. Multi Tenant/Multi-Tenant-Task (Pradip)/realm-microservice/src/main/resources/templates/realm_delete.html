@@ -9,10 +9,12 @@
         <div class="card border-0 shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Delete Realm</h5>
-              <form method="get" action="deleterealm" onsubmit="takeConformation()">
+            <div th:if="${realms.isEmpty()}" class="alert alert-danger"><strong>Danger! </strong>Realms are not available in keycloak</div>
+              <form th:if="${!realms.isEmpty()}" method="get" action="deleterealm" onsubmit="takeConformation()"  >
                 <div class="form-floating">
-                  <input type="text" class="form-control" name="realm"  id="floatingInput" placeholder="Realm Name" required="required" />
-                  <label for="floatingInput">Realm Name</label>
+                  <select class="form-select" aria-label="Default select example" name="realm">
+                    <option th:each="realm , iter: ${realms}" th:value="${realm.getRealm()}" th:text="${realm.getRealm()}"></option>
+                  </select>
                 </div>
                 <br><br>
                 <div class="d-grid">

@@ -19,7 +19,7 @@ public class UIController {
 
     @GetMapping
     public String getAllRealms(Model model){
-        model.addAttribute("realms", keycloakService.getAllRealm());
+        setAllRealmsToModel(model);
         return "realms";
     }
 
@@ -52,6 +52,7 @@ public class UIController {
 
         model.addAttribute("deleteMessage",deleteMessage);
         System.out.println("\n"+deleteMessage+"\n"+deleteMessageDB+"\n");
+        setAllRealmsToModel(model);
         return "realm_delete";
     }
 
@@ -61,7 +62,8 @@ public class UIController {
     }
 
     @GetMapping("/realm_delete")
-    public String getRealmdeletionPage(){
+    public String getRealmdeletionPage(Model model){
+        setAllRealmsToModel(model);
         return "realm_delete";
     }
 
@@ -71,5 +73,8 @@ public class UIController {
 //        String rolesInRealm = keycloakService.addRoleToUser();
 //        System.out.println(rolesInRealm);
         return "rolesInRealm";
+    }
+    private void setAllRealmsToModel(Model model) {
+        model.addAttribute("realms", keycloakService.getAllRealm());
     }
 }
