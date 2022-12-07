@@ -35,10 +35,10 @@
                   <a th:text="${realm.isEnabled()}"></a>
                 </td>
                 <td>
-                  <a th:href="'http://localhost:2222/tenant/' + ${realm.getRealm()} + '/users'" target="_blank">Go</a>
+                  <a class="redirect_a" onclick="takeConformation()" th:href="'http://localhost:2222/tenant/' + ${realm.getRealm()} + '/users'" target="_blank">Go</a>
                 </td>
                 <td>
-                  <a th:href="'http://localhost:3333/tenant/' + ${realm.getRealm()} + '/home'" target="_blank">Go</a>
+                  <a class="redirect_a" onclick="takeConformation()" th:href="'http://localhost:3333/tenant/' + ${realm.getRealm()} + '/home'" target="_blank">Go</a>
                 </td>
               </tr>
               </tbody>
@@ -48,6 +48,14 @@
       </div>
     </div>
   </div>
+  <script>
+    function takeConformation(){
+      var result = confirm("Are you sure ?");
+      if (!result) {
+         event.preventDefault();
+       }
+    }
+  </script>
 </section>
 </body>
 </html>

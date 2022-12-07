@@ -1,6 +1,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments :: html_head"/>
-<body>
+<body >
     <section th:replace="fragments :: html_header"/>
     <section>
         <div class="container">
@@ -41,5 +41,10 @@
             </div>
         </div>
     </section>
+    <script th:inline="javascript">
+         if([[${createMessage}]] != null) {
+            alert([[${createMessage}]])
+          }
+  </script>
 </body>
 </html>

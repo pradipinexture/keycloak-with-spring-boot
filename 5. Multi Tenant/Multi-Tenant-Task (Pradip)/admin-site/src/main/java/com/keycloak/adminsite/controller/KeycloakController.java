@@ -34,7 +34,9 @@ public class KeycloakController {
     }
 
     @GetMapping("/{realm}/user_delete")
-    public String getUserdeletionPage(){
+    public String getUserdeletionPage(Model model){
+        setUsersInModel(model);
+
         return "user_delete";
     }
 
@@ -50,14 +52,25 @@ public class KeycloakController {
 
     @GetMapping("/{realm}/deleteuser")
     public String deleteUser(@RequestParam("userId") String userId, Model model) {
-        String deleteMessage = keycloakService.deleteUser(userId);
+        String deleteMessage;
+        if(!keycloakService.getUser(userId).getUsername().equals("master")){
+            deleteMessage = keycloakService.deleteUser(userId);
+        }
+        else {
+            deleteMessage="Master user can not delete";
+        }
         model.addAttribute("deleteMessage",deleteMessage);
         System.out.println(deleteMessage);
+        setUsersInModel(model);
         return "user_delete";
     }
     @GetMapping("/{realm}/accessdenied")
     public String getAcccessDeniedPage(Model model) {
         model.addAttribute("currentRealm",KeycloakService.currentRealmName);
         return "accessdenied";
+    }
+
+    private void setUsersInModel(Model model) {
+        model.addAttribute("users",keycloakService.getAllUser());
     }
 }

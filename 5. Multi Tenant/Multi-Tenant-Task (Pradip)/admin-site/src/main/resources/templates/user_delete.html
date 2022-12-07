@@ -9,10 +9,15 @@
         <div class="card border-0 shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Delete Realm</h5>
-              <form method="get" action="deleteuser">
+              <form method="get" action="deleteuser"  onsubmit="takeConformation()">
+<!--                <div class="form-floating">-->
+<!--                  <input type="text" class="form-control" name="userId"  id="floatingInput" placeholder="User ID" required="required" />-->
+<!--                  <label for="floatingInput">User ID</label>-->
+<!--                </div>-->
                 <div class="form-floating">
-                  <input type="text" class="form-control" name="userId"  id="floatingInput" placeholder="User ID" required="required" />
-                  <label for="floatingInput">User ID</label>
+                  <select class="form-select" aria-label="Default select example" name="userId">
+                    <option th:each="user , iter: ${users}" th:value="${user.getId()}" th:text="${user.getUsername()}"></option>
+                  </select>
                 </div>
                 <br><br>
                 <div class="d-grid">
@@ -33,5 +38,17 @@
       </div>
     </div>
   </div>
+  <script th:inline="javascript">
+      if([[${deleteMessage}]] != null) {
+        alert([[${deleteMessage}]])
+      }
+
+     function takeConformation(){
+      var result = confirm("Are you sure for delete realm ?");
+      if (!result) {
+         event.preventDefault();
+       }
+    }
+  </script>
 </body>
 </html>

@@ -61,11 +61,14 @@ public class KeycloakService {
 
         try {
             Response response = getKeycloakRealmInstance().users().create(userRepresentation);
+            if(response.getStatus() == 409)
+                throw new Exception("User already exist !!");
             if(response.getStatus() != 201)
-                throw new Exception("Error from keycloak and status code"+response.getStatus());
+                throw new Exception("User not created !!");
+
         }
         catch (Exception e){
-            return "User not created\n"+e;
+            return e.getMessage();
         }
         return "User Created";
     }

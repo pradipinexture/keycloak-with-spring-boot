@@ -52,18 +52,10 @@
         </div>
     </section>
 
-    <script>
-        function changeValue(){
-            let pathArray=window.location.pathname.split("/");
-            console.log("=> Path array is  : "+pathArray);
-            if(pathArray[1] == "tenant"){
-                console.log("Realm is : "+pathArray[2]);
-                document.getElementById("formId").action = "tenant/"+pathArray[2]+"/addUser";
-            }
-            else{
-                console.log("Request is invalid")
-            }
-        }
+    <script th:inline="javascript">
+         if([[${createMessage}]] != null) {
+            alert([[${createMessage}]])
+          }
     </script>
 </body>
 </html>

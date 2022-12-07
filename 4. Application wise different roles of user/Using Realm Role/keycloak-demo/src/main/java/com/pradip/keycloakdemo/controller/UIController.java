@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.util.Map;
 import java.util.Set;
 
 @Controller
@@ -50,6 +51,7 @@ public class UIController {
         if (principal instanceof KeycloakPrincipal) {
             KeycloakPrincipal<KeycloakSecurityContext> kPrincipal = (KeycloakPrincipal<KeycloakSecurityContext>) principal;
             KeycloakSecurityContext keycloakSecurityContext = kPrincipal.getKeycloakSecurityContext();
+            keycloakSecurityContext.getIdToken().getOtherClaims();
             model.addAttribute("kContext",keycloakSecurityContext);
 //            keycloakSecurityContext.getTokenString();
 //            keycloakSecurityContext.getIdTokenString();
