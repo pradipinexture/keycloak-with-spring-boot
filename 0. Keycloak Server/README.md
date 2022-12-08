@@ -1,7 +1,7 @@
 Keyclaok Server
 ===============
 
-Keyclaok have two mode 
+Keyclaok have two operating mode 
 
 <br><h3>1. Developer Mode<h3> 
 -----------------
