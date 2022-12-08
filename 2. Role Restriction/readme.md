@@ -5,12 +5,12 @@ In this project we have implemented user roles for authorization like user wants
 
 Realm role Implementation
 
-	1. Create realm roles - user and admin
+	1. Create realm roles - user and admin in keyclaok
 
-	2. Role assign to user.
+	2. Role assign to user in keycloak.
 
 	3. Add resource restriction using role in spring security.
 
 	4. Now run this spring boot application
 
-	5. Test
+	5. Test it.
