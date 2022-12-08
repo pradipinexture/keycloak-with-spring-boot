@@ -1,16 +1,20 @@
 Role-Based-Application
 ======================
 
-- In this project we have implemented user roles for authorization like user wants to use any resource of this application then user must have a specified role.
+- As demonstrated by the figure below, which shows role-based authorization. If a user wants to access an application's resource, they must have the appropriate role.
 
-<h3>For implement user roles in spring boot application follow below steps</h3>
+<img src="Role base authentication diagram.png" alt="Multiple Realms" style="width:700px;height:350px;">
 
-	1. Create realm roles - user and admin in keyclaok
+- Here are the procedures for setting up role-based authentication in a spring-boot application.
 
-	2. Role assign to user in keycloak.
+	- Create realm roles - user and admin in keyclaok
 
-	3. Add resource restriction using role in spring security.
+	-  Role assign to user in keycloak.
 
-	4. Now run this spring boot application
+	- Add resource restriction using role in spring security.
 
-	5. Test it.
+	- Now run this spring boot application
+
+	- Test it.
+
+- To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/2.%20Role%20Restriction/role-based-app">Role-Based-Project</a>  in git repository.
