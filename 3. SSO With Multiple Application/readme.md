@@ -19,6 +19,6 @@ SSO with Multiple Application
 - So in case of keyclaok, if any two or more applications are register on same relam then SSO works.
 - EX : 
     - We have a google realm and it clients like youtube, drive and gmail etc.
-    - If pradip login into gmail then he able to access youtube and gmail.
+    - If test user login into gmail then he able to access youtube and gmail without login.
 
 - To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/3.%20SSO%20With%20Multiple%20Application/keycloak-demo">first app</a> and <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/3.%20SSO%20With%20Multiple%20Application/keycloak-demo2">second app</a>  in git repository.
