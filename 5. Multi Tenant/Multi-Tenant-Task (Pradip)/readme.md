@@ -9,7 +9,7 @@ Task for multi-tenant
 
 	1. Create one microservice that create realm in keycloak.
 	2. Create multiple microservice and implement multi tenancy in these microsevices.
-	3. when any user create new realm then him/her redirect with newly created realm and he/she feels like I have mine vertual software.
+	3. Any user who creates a new realm is redirected to it and given the impression that they have their own virtual organisation.
 
 
 Solution
@@ -45,11 +45,11 @@ Solution
 - Note : User can not perfrom any operation in master realm.
 
 <br><h3>2. user-site</h3>
-- In usersite user can register himself and able to see him/her profile.
+- On the user site, users can register and view their profiles.
 
 <br><h3>3. admin-site</h3>
-- admin-site has a functionality like get,create and delete user.
-- Note : only admin user can able to login in admin site and user is not admin then redirect to eror page and give two option logout and Go to user site.
+- The admin site features user get, create, and delete functionality.
+- Note : If a user is not an admin, they are redirect to access denied page have buttons that say "logout" and "go to user's site". Only admin users are permitted to log into admin sites.
 
 
 
