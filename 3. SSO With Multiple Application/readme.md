@@ -3,9 +3,8 @@ SSO with Multiple Application
 <br><h3>Task<h3> 
 ----------------
 
-	Create multiple microservices
-	Configure keyclaok on those applicatios.
-	When user login with any one application then he/she able to access all resources without login on other application..
+	Construct several microservices and set up Keyclaok.
+	A user should have access to all resources after logging in with one  application without needing to do it again in another. 
  
  
 <br><h3>Solution<h3> 
@@ -13,12 +12,16 @@ SSO with Multiple Application
 
 - Firstly we need knowledge of the SSO
 - Single sign-on (SSO) is an authentication method that enables users to securely authenticate with multiple applications and websites by using just one set of credentials.
+- There are two possibilities for Keyclaok 
 
-<img src="https://cdn.pixabay.com/photo/2019/03/28/22/23/link-4088190_960_720.png" alt="HTML tutorial" style="width:42px;height:42px;">
+<br><h4>1. SSO with Single Realm</h4> 
 
-- So in case of keyclaok, if any two or more applications are register on same relam then SSO works.
-- EX : 
-    - We have a google realm and it clients like youtube, drive and gmail etc.
-    - If test user login into gmail then he able to access youtube and gmail without login.
+- As you can see in the diagram below, Once a user logs into YouTube, he or she can access the Drive and Gmail applications because the Google organisation shares a common database across all applications. 
+<img src="Single Realm.png" alt="Single Realm" style="width:600px;height:350px;">
+
+<br><h4>2. SSO with Multiple Realm</h4> 
+
+- As you can 
+<img src="Multiple Realms.png" alt="Multiple Realms" style="width:700px;height:350px;">
 
 - To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/3.%20SSO%20With%20Multiple%20Application/keycloak-demo">first app</a> and <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/3.%20SSO%20With%20Multiple%20Application/keycloak-demo2">second app</a>  in git repository.
