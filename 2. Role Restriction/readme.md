@@ -1,9 +1,9 @@
 Role-Based-Application
 ======================
 
-In this project we have implemented user roles for authorization like user wants to use any resource of this application then user must have a specified role.
+-In this project we have implemented user roles for authorization like user wants to use any resource of this application then user must have a specified role.
 
-Realm role Implementation
+<h3>For implement user roles in spring boot application follow below steps</h3>
 
 	1. Create realm roles - user and admin in keyclaok
 
