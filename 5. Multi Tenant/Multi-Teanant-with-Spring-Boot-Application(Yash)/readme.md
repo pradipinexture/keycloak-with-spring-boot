@@ -7,11 +7,8 @@ Multi-tenant-Task
 Task for multi-tenant
 ---------------------
 
-	- how to implement multi-tenant system in spring boot application
+	 how to implement multi-tenant system in spring boot application
 
-
-Solution
---------
 - Flow diagram of the multi-tenant project.
 <img src="Multi Tenant Project Flow Diagram_.png" alt="Multiple Realms" style="width:850px;height:500px;">
 
