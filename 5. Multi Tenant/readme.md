@@ -8,7 +8,7 @@ There are two task.
 
 - Here we are provide how to implement multi-tenant system in spring boot application.
 
-- To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/5.%20Multi%20Tenant/keycloak-demo">Multi-Tenant-Project</a>. 
+- To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/5.%20Multi%20Tenant/Multi-Teanant-with-Spring-Boot-Application(Yash)">Multi-Tenant-with-spring-boot</a>. 
 
 <br><h3>2. Multi Tenant Task(Pradip)<h3> 
  ------------------
