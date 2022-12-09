@@ -38,11 +38,10 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         super.configure(http);
         http
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
                 .antMatchers("/user*").hasRole("user")
                 .antMatchers("/admin*").hasRole("admin")
                 .antMatchers("/superadmin*").hasRole("super-admin")
-                .anyRequest().permitAll()
+                .anyRequest().authenticated()
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/")
                 .and().exceptionHandling().accessDeniedPage("/accessdenied");
         http.csrf().disable();
