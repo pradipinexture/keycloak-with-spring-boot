@@ -14,7 +14,7 @@ Task for multi-tenant
 
 Solution
 --------
-- Flow diagram of the multi-tenant project.
+- Flow diagram of the Multi Tenant System.
 <img src="Multi Tenant Task.png " alt="Multiple Realms" style="width:850px;height:500px;">
 
 <br><h3>Explaination</h3>
