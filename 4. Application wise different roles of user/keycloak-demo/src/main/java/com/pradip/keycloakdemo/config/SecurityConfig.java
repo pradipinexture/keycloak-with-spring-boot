@@ -23,22 +23,11 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     /**
      * Registers the KeycloakAuthenticationProvider with the authentication manager.
      */
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        KeycloakAuthenticationProvider keycloakAuthenticationProvider=keycloakAuthenticationProvider();
-//        keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
-//        auth.authenticationProvider(keycloakAuthenticationProvider);
-//    }
-
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) {
-        CustomKeycloakAuthenticationProvider keycloakAuthenticationProvider = CustomKeycloakAuthenticationProvider();
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        KeycloakAuthenticationProvider keycloakAuthenticationProvider=keycloakAuthenticationProvider();
         keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
         auth.authenticationProvider(keycloakAuthenticationProvider);
-    }
-
-    private CustomKeycloakAuthenticationProvider CustomKeycloakAuthenticationProvider() {
-        return new CustomKeycloakAuthenticationProvider();
     }
 
     /**
@@ -60,7 +49,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         super.configure(http);
         http
                 .authorizeRequests()
-                .antMatchers("/user*").hasRole("user-admin")
+                .antMatchers("/user*").hasRole("user")
                 .antMatchers("/admin*").hasRole("admin")
                 .anyRequest().permitAll().and().logout().logoutUrl("/logout").logoutSuccessUrl("/")
                 .and().exceptionHandling().accessDeniedPage("/accessdenied");
