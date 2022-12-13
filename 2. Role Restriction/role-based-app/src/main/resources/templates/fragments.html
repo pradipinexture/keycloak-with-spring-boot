@@ -1,4 +1,4 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:fragment="html_head">
     <meta charset="UTF-8">
     <title>Role Based App</title>
@@ -28,7 +28,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout">Logout</a>
+                            <a sec:authorize="isAuthenticated()" class="nav-link" href="/logout">Logout</a>
+                            <a sec:authorize="!isAuthenticated()" class="nav-link" href="/sso/login">Login</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -39,5 +40,6 @@
             </div>
         </nav>
     </section>
+
 </body>
 </html>
