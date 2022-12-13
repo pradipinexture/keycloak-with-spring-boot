@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-admin-client</artifactId>
-			<version>18.0.0</version>
+			<version>20.0.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-spring-boot-starter -->
 		<dependency>
@@ -60,7 +60,7 @@
 			<dependency>
 				<groupId>org.keycloak.bom</groupId>
 				<artifactId>keycloak-adapter-bom</artifactId>
-				<version>19.0.3</version>
+				<version>20.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
