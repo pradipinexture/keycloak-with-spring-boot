@@ -11,8 +11,13 @@ Keycloak with spring boot application
 -----------------
 
 
-<br><h4>Keyclaok Setup</h4> 
-- Create a client and user with the required parameter using keyclaok UI.
+<br><h4>Keyclaok Setup using UI</h4> 
+- Create Realm
+- Create Client with necessary field.
+- Create user and set password of created user.
+
+
+<br><h4>Spring Boot Application Setup</h4>
 - Set up the properties listed below in the <a href="https://github.com/pradipinexture/keycloak-with-spring-boot/blob/main/1.%20Keycloak%20With%20Spring%20Boot/keycloak-demo/src/main/resources/application.properties">application.properties</a>file. 
 	- Realm Name
 	- ClientId
