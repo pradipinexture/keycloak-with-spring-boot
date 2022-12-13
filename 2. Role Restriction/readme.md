@@ -7,14 +7,20 @@ Role-Based-Application
 
 - Here are the procedures for setting up role-based authentication in a spring-boot application.
 
-	- Create realm roles - user and admin in keyclaok
+<h4>Keycloak UI setup</h4>
 
-	-  Role assign to user in keycloak.
+	1. Create Realm
+	2. Create Client with required parameter.
+	3. Create User and set password also
+	4. Create realm roles - user and admin in keyclaok
+	5. Role assign to user in keycloak.
 
-	- Add resource restriction using role in spring security.
 
-	- Now run this spring boot application
+<h4>Spring Boot Application setup</h4>
 
-	- Test it.
+	1. Add Realm Name, ClientID and ClientSecret(If client private) 
+	2. Add resource restriction using role in spring security. ()
+	2. Now run this spring boot application
+	3. Test it.
 
 - To get started, check out the <a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/2.%20Role%20Restriction/role-based-app">Role-Based-Project</a>  in git repository.
