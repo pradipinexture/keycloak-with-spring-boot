@@ -17,6 +17,17 @@ Solution
 - Flow diagram of the Multi Tenant System.
 <img src="Multi Tenant Task.png " alt="Multiple Realms" style="width:850px;height:500px;">
 
+<h4>Keycloak UI setup</h4>
+
+	1. Create realm management system client in master realm with required parameter.
+
+
+<h4>Spring Boot Application setup</h4>
+
+	1. Add Realm Name and ClientID in relam-management-system 
+	2. For another microservice configure multi-tenancy.
+
+
 <br><h3>Explaination</h3>
 - We have created below microservices for multi-tenant task
 
