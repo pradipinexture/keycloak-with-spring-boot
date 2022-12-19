@@ -29,7 +29,7 @@ Keyclaok have two operating mode
 
 - Make sure below configuration must be configured to keyclaok
 
-	- https-key-store-file=${kc.home.dir}conf/localhost.p12
+	- https-key-store-file=${kc.home.dir}/conf/localhost.p12
 	- https-key-store-password=changeit
 
 	- hostname=localhost
