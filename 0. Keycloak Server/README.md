@@ -34,8 +34,9 @@ Keyclaok have two operating mode
 
 	- hostname=localhost
 
-- The production mode is started by invoking the following command from keyclaok root direcotry
 
+- The production mode is started by invoking the following command from keyclaok root direcotry
+	- bin/kc.sh build
 	- bin/kc.sh start
 	
 - To get started, check out the (<a target = "_blank" href="https://github.com/pradipinexture/keycloak-with-spring-boot/tree/main/0.%20Keycloak%20Server/keycloak-19.0.3-prod">Keycloak server with production mode</a>).
