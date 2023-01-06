@@ -17,6 +17,7 @@ SSO with Multiple Application
 <br><h4>1. SSO with Single Realm</h4> 
 
 - As you can see in the diagram below, Once a user logs into YouTube, he or she can access the Drive and Gmail applications because the Google organisation shares a common database across all applications. 
+- Let's take our scenario we have a two application keyclaok-demo-1 and keycloak-demo-2 and both application are register in same realm. Now If user login into keycloak-demo-1 application then he/she can able to access keycloak-demo-2 without login again. 
 - This scenario is covered in this demonstration. 
 <img src="Single Realm.png" alt="Single Realm" style="width:600px;height:350px;">
 
@@ -25,6 +26,7 @@ SSO with Multiple Application
 
 - Separate realms each have their own databases, as you can see in the figure below.
 As a result, if he wants to use YouTube, he must sign into his Google account. However, if he now wants to use Word, he cannot access Microsoft services without also signing into his Microsoft account. 
+- Let's take our scenario we have a two application keyclaok-demo-1 and keycloak-demo-2 and both application are register in diffrent realm. Now If user login into keycloak-demo-1 application then he/she try to access keycloak-demo-2 then application gives login page. 
 - This scenario is not covered in this demonstration.
 <img src="Multiple Realms.png" alt="Multiple Realms" style="width:700px;height:350px;">
 
