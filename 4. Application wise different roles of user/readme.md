@@ -19,7 +19,7 @@ Application wise different roles of user
 	- Create User in keyclaok and assign client roles
 		- We create test user with user role for the first and admin and superadmin for  second apps, respectively.
 
-	- Add below property in application.properties to enable client wise role base access controller.
+	- Add below property in application.properties to enable client wise role base access control.
 		- keycloak.use-resource-role-mappings=true
 		- Note : If we use client roles then realm roles are disabled.
 	
