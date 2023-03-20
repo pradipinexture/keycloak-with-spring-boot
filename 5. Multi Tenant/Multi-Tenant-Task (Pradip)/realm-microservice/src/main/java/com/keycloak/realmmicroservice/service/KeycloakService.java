@@ -8,6 +8,7 @@ import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.representations.idm.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +21,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class KeycloakService {
+
+
     @Autowired
     Keycloak keycloak;
+
+    @Value("${keycloak.auth-server-url}")
+    private String keycloakURL;
 
     @Autowired
     CustomRepisitory customRepisitory;
@@ -165,7 +171,7 @@ public class KeycloakService {
     }
 
     public  String AddKeycloakDepDB(String realm){
-        CustomKeycloakDeployment deployment=new CustomKeycloakDeployment(realm,"http://localhost:8080","external","dynamic-software",true);
+        CustomKeycloakDeployment deployment=new CustomKeycloakDeployment(realm,keycloakURL,"external","dynamic-software",true);
         CustomKeycloakDeployment save = customRepisitory.save(deployment);
         if (save == null)
             return  "Keycloak deployment is not Added in DB.";
