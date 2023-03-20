@@ -66,7 +66,7 @@ Solution
 - The admin site features user get, create, and delete functionality.
 - Note : If a user is not an admin, they are redirect to access denied page have buttons that say "logout" and "go to user's site". Only admin users are permitted to log into admin sites.
 
-<br><b>NOTE :</b>
+<br><b>NOTE :</b><br>
 <br>In <b>application.properties</b> file configure below properties according to your keycloak server configuration.
 <br><br>keycloak.auth-server-url = {keycloak server URL}
 <br>keycloak-master-admin-username = {your username}
