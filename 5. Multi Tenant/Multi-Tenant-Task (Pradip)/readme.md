@@ -68,9 +68,9 @@ Solution
 
 <br><b>NOTE :</b>
 <br>In application.properties file configure below properties according to your keycloak server configuration.
-<br>keycloak.auth-server-url = {keycloak server URL}
+<br><br>keycloak.auth-server-url = {keycloak server URL}
 <br>keycloak-master-admin-username = {your username}
 <br>keycloak-master-admin-password = {your password}
-<br>Also change the password to your database password
+<br><br>Also change the password to your database password
 <br>spring.datasource.password=password
 
