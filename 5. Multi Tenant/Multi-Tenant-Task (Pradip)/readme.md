@@ -67,8 +67,8 @@ Solution
 - Note : If a user is not an admin, they are redirect to access denied page have buttons that say "logout" and "go to user's site". Only admin users are permitted to log into admin sites.
 
 <br><b>NOTE :</b>
-<br>- In application.properties file configure below properties according to your keycloak server configuration.
-keycloak.auth-server-url = {keycloak server URL}
+<br>In application.properties file configure below properties according to your keycloak server configuration.
+<br>keycloak.auth-server-url = {keycloak server URL}
 <br>keycloak-master-admin-username = {your username}
 <br>keycloak-master-admin-password = {your password}
 <br>Also change the password to your database password
