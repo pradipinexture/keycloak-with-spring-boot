@@ -38,6 +38,7 @@ Solution
 
 <br><h4>1. realm-management-system</h4>
 - This site accessible by only mater realm's user.
+- <b>NOTE :</b><br>You should create realm-managemen-system client in the master realm of keycloak because all operation of keycloak perform by master realm only and we are performing realm CRUD in this project.
 - It has get, create and delete realm functionally.
 
 - When master admin create any realm then few functionally triggered
